@@ -12,6 +12,7 @@ import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import java.text.SimpleDateFormat;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public long timeLeftInMillisecond = 3600000;
     private TextClock clock;
     private VideoView videoView = null;
+
 
 
     @Override
@@ -37,12 +39,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWindow().setFormat(PixelFormat.UNKNOWN);
 
-        //Clock
-        this.clock =  (TextClock) findViewById(R.id.currentTimeClock);
-        clock.setTextColor(Color.WHITE);
-        clock.setFormat24Hour("hh:mm");
 
-        Log.d("hello ", "hello" +this.clock.getTimeZone());
+        clock(this.clock);
+        video(this.videoView);
+
+
 
 
 
@@ -52,8 +53,26 @@ public class MainActivity extends AppCompatActivity {
         //String endTime = getEndTime(clock);
 
 
-        //Video
-        this.videoView = (VideoView) findViewById(R.id.authenticationVideo);
+
+
+
+    }
+
+    /**
+     * Display the clock
+     * @param clock
+     */
+    private void clock(TextClock clock) {
+        clock = (TextClock) findViewById(R.id.currentTimeClock);
+        clock.setTextColor(Color.WHITE);
+        clock.setFormat24Hour("hh:mm");
+    }
+
+    /**
+     * This is to display the video
+     */
+    private void video(VideoView videoView) {
+        videoView = (VideoView) findViewById(R.id.authenticationVideo);
         videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.video);
 
         if(videoView != null) {
@@ -62,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
         this.counterText = findViewById(R.id.countDownText);
         startTimer();
-
     }
 
     /**

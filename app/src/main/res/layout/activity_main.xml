@@ -21,6 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/karlstadBussTextLowerCorner"
         app:layout_constraintTop_toBottomOf="@+id/typeOfTicketText"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/solen" />
 
     <TextView
@@ -28,6 +29,7 @@
         android:layout_width="108dp"
         android:layout_height="27dp"
         android:layout_marginBottom="16dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="15dp"
         android:text="@string/app_name"
@@ -38,7 +40,7 @@
         app:layout_constraintEnd_toStartOf="@+id/sunImage"
         app:layout_constraintStart_toEndOf="@+id/phonenumberText"
         app:layout_constraintTop_toBottomOf="@+id/authenticationVideo"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -134,6 +136,8 @@
         android:format24Hour="hh:mm"
         android:textColor="@android:color/black"
         android:textSize="70sp"
+        android:timeZone="GMT+0100"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,7 +160,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/karlstadBussTextLowerCorner"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authenticationVideo" />
+        app:layout_constraintTop_toBottomOf="@+id/authenticationVideo"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/phoneImage"
