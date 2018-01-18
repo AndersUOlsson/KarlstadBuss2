@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     public long timeLeftInMillisecond = 3600000;
     private TextClock clock;
     private VideoView videoView = null;
+    model model = new model();
+    private TextView startDate;
 
 
 
@@ -39,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWindow().setFormat(PixelFormat.UNKNOWN);
 
+        this.startDate = (TextView) findViewById(R.id.startDateText);
+
 
         clock(this.clock);
         video(this.videoView);
@@ -48,9 +53,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         //Setting timer
-        //String startTime = getStartTime(clock);
-        //String endTime = getEndTime(clock);
+        String startTime = model.getStartTime();
+        this.startDate.setText(startTime);
+        Log.d("Timer", "StartTime" +startTime );
+        String endTime = model.getEndTime(this.clock);
 
 
 
@@ -58,10 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * Display the clock
-     * @param clock
-     */
+
     private void clock(TextClock clock) {
         clock = (TextClock) findViewById(R.id.currentTimeClock);
         clock.setTextColor(Color.WHITE);
