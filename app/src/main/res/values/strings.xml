@@ -7,4 +7,7 @@
     <string name="timer">00:59:59</string>
     <string name="howManyTickets">1/1</string>
     <string name="totalAmontMoney">23.00 kr</string>
+    <string name="valid">GILTIG</string>
+    <string name="startTime">00:00</string>
+    <string name="endTime">00:00</string>
 </resources>

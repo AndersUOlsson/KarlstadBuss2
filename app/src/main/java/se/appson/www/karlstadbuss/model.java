@@ -1,30 +1,31 @@
 package se.appson.www.karlstadbuss;
 
+
 import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.widget.TextClock;
 import android.widget.TextView;
-import android.widget.VideoView;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by andyw on 2018-01-18.
- */
 
 public class model {
 
     private TextView counterText;
-    public CountDownTimer countDownTimer;
-    public long timeLeftInMillisecond = 3600000;
 
+    private long timeLeftInMillisecond = 3600000;
+
+    public void clock(TextClock clock) {
+
+        clock.setTextColor(Color.WHITE);
+        clock.setFormat24Hour("hh:mm");
+    }
 
     /**
      * Sets the start time when app is starting.
-     * @param clock
+
      */
     public String getStartTime() {
 
@@ -43,19 +44,32 @@ public class model {
      * @return
      */
     public String getEndTime(TextClock clock) {
-        //Todo:Fix the timer to show one hour later.
-        //String endTime = clock.getText().toString();
-        //Log.d("TIMER", "EndTimer: " + endTime);
-        //String location = "moskva";
-        //clock.setTimeZone(location);
-        //String hell = clock.getText().toString();
 
-        //Log.d("TIMER", "EndTimer: " + hell);
+        Calendar c = Calendar.getInstance();
+        Date d = null;
+        try{
+
+            long t =  d.getTime()+60;;
+
+            Log.d("Timer", "Time" + t +"");
+        }
+        catch(NullPointerException e) {
+            e.getMessage();
+        }
+        //d.setHours( (Date)c.getTime().getHours() +1);
+        //c.setTime();
+
+        //SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        //String formattedDate = df.format(c.getTime());
+
+
         return "hello";
     }
 
     public void startTimer() {
-        this.countDownTimer = new CountDownTimer(timeLeftInMillisecond,1000) {
+        CountDownTimer countDownTimer
+                = new CountDownTimer(timeLeftInMillisecond,
+                1000) {
 
             @Override
             public void onTick(long l) {
@@ -85,3 +99,4 @@ public class model {
         counterText.setText(timeLeftText);
     }
 }
+

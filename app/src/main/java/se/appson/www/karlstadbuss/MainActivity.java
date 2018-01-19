@@ -1,6 +1,6 @@
 package se.appson.www.karlstadbuss;
 
-import android.graphics.Color;
+
 import android.graphics.PixelFormat;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -12,10 +12,6 @@ import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
-
 public class MainActivity extends AppCompatActivity {
 
     private TextView counterText;
@@ -25,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private VideoView videoView = null;
     model model = new model();
     private TextView startDate;
+    private TextView endDate;
 
 
 
@@ -43,9 +40,12 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFormat(PixelFormat.UNKNOWN);
 
         this.startDate = (TextView) findViewById(R.id.startDateText);
+        this.endDate = (TextView) findViewById(R.id.validTimeEnds);
+        this.clock = (TextClock) findViewById(R.id.currentTimeClock);
+        this.videoView = (VideoView) findViewById(R.id.authenticationVideo);
 
 
-        clock(this.clock);
+        model.clock(this.clock);
         video(this.videoView);
 
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        startTimer();
         //Setting timer
         String startTime = model.getStartTime();
         this.startDate.setText(startTime);
@@ -67,17 +67,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void clock(TextClock clock) {
-        clock = (TextClock) findViewById(R.id.currentTimeClock);
-        clock.setTextColor(Color.WHITE);
-        clock.setFormat24Hour("hh:mm");
-    }
+
 
     /**
      * This is to display the video
      */
-    private void video(VideoView videoView) {
-        videoView = (VideoView) findViewById(R.id.authenticationVideo);
+    public void video(VideoView videoView) {
+
         videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.video);
 
         if(videoView != null) {
@@ -88,37 +84,6 @@ public class MainActivity extends AppCompatActivity {
         startTimer();
     }
 
-    /**
-     * Sets the start time when app is starting.
-     * @param clock
-     */
-    private String getStartTime(TextClock clock) {
-
-        //String startTime = clock.getText().toString();
-
-
-        //Print to Logcat
-        //Log.d("TIMER", "setTimer: " + startTime);
-
-        return "";//startTime;
-    }
-
-    /**
-     * Sets and returns the time the ticket is valide.
-     * @param clock
-     * @return
-     */
-    private String getEndTime(TextClock clock) {
-        //Todo:Fix the timer to show one hour later.
-        //String endTime = clock.getText().toString();
-        //Log.d("TIMER", "EndTimer: " + endTime);
-        //String location = "moskva";
-        //clock.setTimeZone(location);
-        //String hell = clock.getText().toString();
-
-        //Log.d("TIMER", "EndTimer: " + hell);
-        return "hello";
-    }
 
     private void startTimer() {
         this.countDownTimer = new CountDownTimer(timeLeftInMillisecond,1000) {

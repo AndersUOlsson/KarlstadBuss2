@@ -252,15 +252,43 @@
         android:id="@+id/startDateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginEnd="310dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
-        android:text="TextView"
+        android:layout_marginTop="52dp"
+        android:text="@string/startTime"
         app:layout_constraintBottom_toTopOf="@+id/authenticationVideo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countDownText" />
+
+    <TextView
+        android:id="@+id/validText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="325dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:text="@string/valid"
+        app:layout_constraintBottom_toTopOf="@+id/startDateText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countDownText" />
+
+    <TextView
+        android:id="@+id/validTimeEnds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/endTime"
+        app:layout_constraintBottom_toTopOf="@+id/authenticationVideo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/validText"
+        app:layout_constraintTop_toBottomOf="@+id/countDownImage" />
 
 
 </android.support.constraint.ConstraintLayout>
