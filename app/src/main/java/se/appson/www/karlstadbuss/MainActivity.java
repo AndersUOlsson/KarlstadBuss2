@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         this.endDate.setText(model.getEndTime());
     }
 
+    //Todo: Look at ticket_bg.xml for the verification. res/drawable folder.
+
     /**
      * This is to display the video
      */
