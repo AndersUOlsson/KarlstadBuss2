@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     model model = new model();
     private TextView startDate;
     private TextView endDate;
+    private ImageView validBackground;
 
 
 
@@ -48,26 +50,10 @@ public class MainActivity extends AppCompatActivity {
         model.clock(this.clock);
         video(this.videoView);
 
-
-
-
-
-
         startTimer();
-        //Setting timer
-        String startTime = model.getStartTime();
-        this.startDate.setText(startTime);
-        Log.d("Timer", "StartTime" +startTime );
-        String endTime = model.getEndTime(this.clock);
-
-
-
-
-
+        this.startDate.setText( model.getStartTime());
+        this.endDate.setText(model.getEndTime());
     }
-
-
-
 
     /**
      * This is to display the video

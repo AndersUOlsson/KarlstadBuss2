@@ -135,13 +135,14 @@
         android:layout_marginTop="30dp"
         android:format24Hour="hh:mm"
         android:textColor="@android:color/black"
-        android:textSize="70sp"
+        android:textSize="50sp"
         android:timeZone="GMT+0100"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authenticationVideo" />
+        app:layout_constraintTop_toBottomOf="@+id/authenticationVideo"
+        app:layout_constraintVertical_bias="0.498" />
 
     <EditText
         android:id="@+id/phonenumberText"
@@ -279,7 +280,7 @@
     <TextView
         android:id="@+id/validTimeEnds"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="17dp"
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="78dp"
         android:layout_marginStart="211dp"
@@ -289,6 +290,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/validText"
         app:layout_constraintTop_toBottomOf="@+id/countDownImage" />
+
+    <ImageView
+        android:id="@+id/validBackground"
+        android:layout_width="135dp"
+        android:layout_height="35dp"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="286dp" />
 
 
 </android.support.constraint.ConstraintLayout>
