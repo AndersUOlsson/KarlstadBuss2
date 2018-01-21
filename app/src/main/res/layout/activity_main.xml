@@ -12,188 +12,117 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="405dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="246dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countDownText"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/validbackground" />
+        android:layout_width="357dp"
+        android:layout_height="46dp"
+        app:srcCompat="@drawable/validbackground"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="307dp" />
 
     <ImageView
         android:id="@+id/sunImage"
         android:layout_width="45dp"
         android:layout_height="33dp"
-        android:layout_marginBottom="17dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="456dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/karlstadBussTextLowerCorner"
-        app:layout_constraintTop_toBottomOf="@+id/typeOfTicketText"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/solen" />
+        app:srcCompat="@drawable/solen"
+        tools:layout_editor_absoluteX="343dp"
+        tools:layout_editor_absoluteY="517dp" />
 
     <TextView
         android:id="@+id/karlstadBussTextLowerCorner"
         android:layout_width="108dp"
         android:layout_height="27dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="15dp"
         android:text="@string/app_name"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sunImage"
-        app:layout_constraintStart_toEndOf="@+id/phonenumberText"
-        app:layout_constraintTop_toBottomOf="@+id/authenticationVideo"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="524dp" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="0dp"
+        android:layout_width="384dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/karlstadBussTextLowerCorner"
-        android:layout_marginBottom="276dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="3dp" />
 
 
     <ImageView
         android:id="@+id/manImage"
         android:layout_width="17dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="35dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/karlstadBussText"
-        app:layout_constraintEnd_toStartOf="@+id/categoryOfAgeText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:srcCompat="@drawable/gubbe" />
+        app:srcCompat="@drawable/gubbe"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="7dp" />
 
     <TextView
         android:id="@+id/categoryOfAgeText"
         android:layout_width="103dp"
         android:layout_height="31dp"
-        android:layout_marginBottom="1dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
         android:text="@string/vuxen"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/typeOfTicketText"
-        app:layout_constraintEnd_toStartOf="@+id/totalCostText"
-        app:layout_constraintStart_toEndOf="@+id/manImage"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="5dp" />
 
     <TextView
         android:id="@+id/typeOfTicketText"
         android:layout_width="33dp"
         android:layout_height="16dp"
-        android:layout_marginBottom="37dp"
-        android:layout_marginEnd="232dp"
-        android:layout_marginStart="15dp"
         android:text="@string/enkel"
         android:textColor="@android:color/darker_gray"
         android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/karlstadBussText"
-        app:layout_constraintEnd_toStartOf="@+id/totalCostText"
-        app:layout_constraintStart_toEndOf="@+id/manImage"
-        app:layout_constraintTop_toBottomOf="@+id/categoryOfAgeText" />
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="37dp" />
 
     <TextView
         android:id="@+id/karlstadBussText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="41dp"
-        android:layout_marginEnd="179dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="33dp"
         android:text="@string/karlstadbuss"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/countDownText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeOfTicketText" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="83dp" />
 
 
     <VideoView
         android:id="@+id/authenticationVideo"
-        android:layout_width="367dp"
-        android:layout_height="178dp"
-        android:layout_marginBottom="9dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="81dp"
-        app:layout_constraintBottom_toTopOf="@+id/sunImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countDownText" />
+        android:layout_width="334dp"
+        android:layout_height="146dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="362dp" />
 
     <TextClock
         android:id="@+id/currentTimeClock"
         android:layout_width="274dp"
         android:layout_height="98dp"
-        android:layout_marginBottom="250dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
         android:format24Hour="hh:mm"
         android:textColor="@android:color/black"
         android:textSize="50sp"
         android:timeZone="GMT+0100"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authenticationVideo"
-        app:layout_constraintVertical_bias="0.498" />
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="380dp" />
 
     <EditText
         android:id="@+id/phonenumberText"
         android:layout_width="131dp"
         android:layout_height="26dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/darker_gray"
         android:ems="10"
         android:inputType="number|phone"
         android:text="@string/phoneNumber"
         android:textAlignment="textEnd"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/karlstadBussTextLowerCorner"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authenticationVideo"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:layout_editor_absoluteY="525dp" />
 
     <ImageView
         android:id="@+id/phoneImage"
         android:layout_width="21dp"
         android:layout_height="19dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginStart="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/phonenumberText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonenumberText"
-        app:srcCompat="@drawable/phoneblack" />
+        app:srcCompat="@drawable/phoneblack"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="530dp" />
 
 
     <LinearLayout
@@ -201,15 +130,9 @@
         android:layout_width="338dp"
         android:layout_height="122dp"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="18dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/boarders"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/countDownText"
-        app:layout_constraintTop_toBottomOf="@+id/lineUnderKarlstadBuss">
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="151dp">
 
     </LinearLayout>
 
@@ -217,33 +140,22 @@
         android:id="@+id/countDownText"
         android:layout_width="218dp"
         android:layout_height="81dp"
-        android:layout_marginBottom="81dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="40dp"
         android:fadingEdge="none"
         android:padding="10dp"
         android:text="@string/timer"
         android:textColor="@android:color/black"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/authenticationVideo"
-        app:layout_constraintEnd_toStartOf="@+id/countDownImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lineUnderKarlstadBuss" />
-
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="169dp" />
 
 
     <ImageView
         android:id="@+id/countDownImage"
         android:layout_width="63dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="89dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/authenticationVideo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/countDownText"
-        app:layout_constraintTop_toBottomOf="@+id/lineUnderKarlstadBuss"
-        app:srcCompat="@drawable/timer" />
+        app:srcCompat="@drawable/timer"
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="177dp" />
 
     <view
         android:id="@+id/lineUnderKarlstadBuss"
@@ -251,82 +163,52 @@
         id="@+id/view"
         android:layout_width="344dp"
         android:layout_height="1dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="16dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/countDownText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/karlstadBussText" />
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/howManyTicketstext"
         android:layout_width="51dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="169dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="20dp"
         android:background="@android:color/white"
         android:text="@string/howManyTickets"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/totalCostText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/categoryOfAgeText"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="3dp" />
 
     <TextView
         android:id="@+id/totalCostText"
         android:layout_width="58dp"
         android:layout_height="22dp"
-        android:layout_marginBottom="71dp"
-        android:layout_marginEnd="16dp"
         android:text="@string/totalAmontMoney"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/lineUnderKarlstadBuss"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/howManyTicketstext" />
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="24dp" />
 
     <TextView
         android:id="@+id/startDateText"
         android:layout_width="151dp"
         android:layout_height="19dp"
-        android:layout_marginBottom="55dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="7dp"
         android:text="@string/startTime"
-        app:layout_constraintBottom_toTopOf="@+id/authenticationVideo"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="326dp" />
 
     <TextView
         android:id="@+id/validText"
         android:layout_width="59dp"
         android:layout_height="16dp"
-        android:layout_marginEnd="309dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
         android:text="@string/valid"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countDownText" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="291dp" />
 
 
     <TextView
         android:id="@+id/validTimeEnds"
         android:layout_width="144dp"
-        android:layout_height="26dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginStart="600dp"
+        android:layout_height="30dp"
         android:text="@string/endTime"
-        app:layout_constraintBottom_toTopOf="@+id/authenticationVideo"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="323dp" />
 
 
 </android.support.constraint.ConstraintLayout>
