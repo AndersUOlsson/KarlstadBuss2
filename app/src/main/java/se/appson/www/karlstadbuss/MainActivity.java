@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         this.endDate = (TextView) findViewById(R.id.validTimeEnds);
         this.clock = (TextClock) findViewById(R.id.currentTimeClock);
         this.videoView = (VideoView) findViewById(R.id.authenticationVideo);
-        //Log
 
 
         model.clock(this.clock);

@@ -11,6 +11,20 @@
 
 
     <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="405dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="246dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countDownText"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/validbackground" />
+
+    <ImageView
         android:id="@+id/sunImage"
         android:layout_width="45dp"
         android:layout_height="33dp"
@@ -44,10 +58,15 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/karlstadBussTextLowerCorner"
-        android:background="@android:color/darker_gray" />
+        android:layout_marginBottom="276dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
@@ -176,6 +195,24 @@
         app:layout_constraintTop_toBottomOf="@+id/phonenumberText"
         app:srcCompat="@drawable/phoneblack" />
 
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="338dp"
+        android:layout_height="122dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/boarders"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/countDownText"
+        app:layout_constraintTop_toBottomOf="@+id/lineUnderKarlstadBuss">
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/countDownText"
         android:layout_width="218dp"
@@ -192,6 +229,7 @@
         app:layout_constraintEnd_toStartOf="@+id/countDownImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lineUnderKarlstadBuss" />
+
 
 
     <ImageView
@@ -251,53 +289,44 @@
 
     <TextView
         android:id="@+id/startDateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="310dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="151dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="7dp"
         android:text="@string/startTime"
         app:layout_constraintBottom_toTopOf="@+id/authenticationVideo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countDownText" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/validText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="325dp"
+        android:layout_width="59dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="309dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="10dp"
         android:text="@string/valid"
-        app:layout_constraintBottom_toTopOf="@+id/startDateText"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countDownText" />
 
+
     <TextView
         android:id="@+id/validTimeEnds"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginStart="211dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="144dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="600dp"
         android:text="@string/endTime"
         app:layout_constraintBottom_toTopOf="@+id/authenticationVideo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/validText"
-        app:layout_constraintTop_toBottomOf="@+id/countDownImage" />
-
-    <ImageView
-        android:id="@+id/validBackground"
-        android:layout_width="135dp"
-        android:layout_height="35dp"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="286dp" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 
 </android.support.constraint.ConstraintLayout>
